@@ -3,7 +3,7 @@ import random
 
 def get_numbers_ticket(min, max, quantity):
     numbers_list = []
-    if 0 < min < max <= 1000 and quantity <= max - min:
+    if 0 < min < max <= 1000 and 0 < quantity <= max - min:
         i = 0
         while i < quantity:
             number = random.randrange(min, max)
@@ -15,4 +15,5 @@ def get_numbers_ticket(min, max, quantity):
         return numbers_list
 
 
-print(get_numbers_ticket(20, 100, 60))
+lottery_numbers = get_numbers_ticket(1, 100, 5)
+print(f"Your lottery numbers: {lottery_numbers}" )
